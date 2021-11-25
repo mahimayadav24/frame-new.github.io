@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>frame14</title>
+    <style>
+        /* aside col starts here */
+        .row__aside {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            width: 100%;
+            border: 3px solid rgba(255, 184, 90, 1);
+            background-color: rgba(250, 245, 241, 1);
+            border-radius: 20px;
+            padding: 30px;
+            overflow: hidden;
+            /* remove when add in styling part */
+            width: 51%;
+            /* remove when add in styling part */
+        }
+
+        .column__aside {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            -webkit-box-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+        }
+
+
+        .bl__aside__col {
+            height: auto;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .bl__aside__col__right {
+            height: auto;
+            padding: 0px 30px;
+        }
+
+        .dbl__aside__col {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+
+        .crt__text {
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+
+
+        .bl__aside__col .img__text {
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Montserrat__SemiBold';
+            padding: 0px 0px;
+            font-size: 14px;
+        }
+
+        .bl__aside__col .pr__pos {
+            position: relative;
+            top: 0;
+        }
+
+        .bl__aside__col span img {
+            width: 30px;
+            transform: translateY(-15px);
+        }
+
+        .bl__aside__col .insert {
+            position: absolute;
+            top: -70px;
+            width: 130%;
+            left: -40px;
+            filter: drop-shadow(0px 20px 40px rgba(153, 150, 129, 0.2));
+        }
+
+
+        .bl__aside__col span {
+            position: absolute;
+            top: -12px;
+            left: 47px;
+        }
+
+        .bl__aside__col .insert__pos {
+            position: absolute;
+            width: 75%;
+            top: 30px;
+            left: 27px;
+            padding: 12px;
+        }
+
+        .bl__aside__col .btn__fl button {
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 184, 90, 1);
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.4vw;
+            font-family: 'Montserrat__Bold';
+            transition: .3s ease-in-out;
+        }
+
+
+        .bl__aside__col .btn__fl button:hover {
+            transform: translateY(-2px);
+            transition: .3s ease-in-out;
+        }
+
+        .btn__fl {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-top: 60%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .bl__aside__col .border__img {
+            position: absolute;
+            width: 80%;
+            left: 21px;
+            top: 13px;
+            padding: 11px;
+        }
+
+        .scroll {
+            height: 262px;
+            overflow-y: auto;
+        }
+
+        /* width */
+        .scroll::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        .scroll::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px grey;
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 2px;
+        }
+
+        /* Handle */
+        .scroll::-webkit-scrollbar-thumb {
+            background: rgba(255, 184, 90, 1);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .scroll::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+
+        .bl__aside__col__right h3 {
+            font-size: 40px;
+            color: rgba(83, 45, 109, 1);
+            font-family: 'Montserrat__Bold';
+        }
+
+        .bl__aside__col__right p {
+            color: rgba(0, 0, 0, 1);
+            font-family: 'Montserrat__Regular';
+            font-size: 14px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .bl__aside__col__right p br {
+                display: none;
+            }
+
+            .bl__aside__col__right h3 {
+                font-size: 26px;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+
+
+            .bl__aside__col__right p {
+                font-size: 12px;
+            }
+
+            .bl__aside__col__right h3 {
+                font-size: 20px;
+            }
+
+            .bl__aside__col span img {
+                width: 10px;
+                transform: translate(-12px, -26px);
+            }
+
+            .bl__aside__col span {
+                top: -23px;
+                left: 1px;
+            }
+
+
+            .bl__aside__col .insert__pos {
+                top: -8px;
+                left: -6px;
+            }
+
+            .bl__aside__col .border__img {
+                left: -11px;
+                top: -18px;
+            }
+        }
+
+        @media screen and (max-width: 538px) {
+            .bl__aside__col .insert__pos {
+                /* margin-top: -8.6rem; */
+            }
+
+            .bl__aside__col__right p {
+                font-size: 12px;
+            }
+
+            .bl__aside__col__right h3 {
+                font-size: 12px;
+            }
+
+            .bl__aside__col__right {
+                padding: 0px 0px 0px 10px;
+            }
+
+            .bl__aside__col .btn__fl button {
+                padding: 10px;
+            }
+
+            .bl__aside__col .border__img {
+                left: -22px;
+                top: -31px;
+            }
+
+            .bl__aside__col .img__text {
+                font-size: 7px;
+            }
+
+            .bl__aside__col .insert__pos {
+                top: -26px;
+                left: -18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='row__aside mt-5'>
+        <div class='dbl__aside__col'>
+            <div class='bl__aside__col'>
+                <div class="pr__pos">
+                    <img class="insert mt-3"
+                        src="https://prod.prowebventures.com/BonusMate/Templates/images/bookmarkImg.png" alt="">
+                    <span> <img src="https://prod.prowebventures.com/BonusMate/Templates/images/slack 1.png" alt="">
+                        <span class="img__text">NomanLIFE</span></span>
+                    <img class="insert__pos"
+                        src="https://prod.prowebventures.com/BonusMate/uploads/products/2021/10/14/prod_21.png" alt="">
+                    <img class="border__img" src="https://prod.prowebventures.com/BonusMate/Templates/images/border.png"
+                        alt="">
+                </div>
+                <div class="btn__fl">
+                    <a href="#"> <button>Retail Value: $165</button></a>
+                </div>
+            </div>
+        </div>
+        <div class='column__aside'>
+            <div class="bl__aside__col__right">
+                <h3><span>Special Bonus #1</span></h3>
+                <div class="scroll">
+                    <p class="pt-4">NomanLife is providing some exicting bonuses for <br>
+                        everybody.
+                        All you need to
+                        do is subscribe now ans get <br> exciting bonuses like this Special
+                        Bonus 2.
+                        <br>
+                        NomanLife is providing some exicting bonuses for <br> everybody. All you
+                        need to
+                        do is subscribe now ans get <br> exciting bonuses like Bonus 2 which is
+                        free
+                        for
+                        you.
+                    </p>
+                    <p>
+                        NomanLife is providing some exicting bonuses for <br> everybody. All you
+                        need to
+                        do is subscribe now ans get <br> exciting bonuses.
+
+                    </p>
+                    <p>
+                        NomanLife is providing some exicting bonuses for <br> everybody. All you
+                        need to
+                        do is subscribe now ans get <br> exciting bonuses.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
